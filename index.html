@@ -14,7 +14,7 @@
     </div>
   </div>
   <script>
-    window.onload = () => {
+    let update = () => {
       const CLASSES = [
         "outline",
         "up",
@@ -45,7 +45,11 @@
       ];
 
       let t = document.getElementById("wrapper");
-      t.className += " " + CLASSES[Math.floor(Math.random() * CLASSES.length)];
+      t.className =
+        "wordart " + CLASSES[Math.floor(Math.random() * CLASSES.length)];
     };
+
+    window.onload = update;
+    window.onclick = update;
   </script>
 </html>
