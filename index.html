@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- weil theresa ein brüh ist -->
+    <!-- https://github.com/arizzitano/css3wordart -->
+    <title>brüh</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <div id="content">
+    <div id="wrapper" class="wordart">
+      <span id="text" class="text transform" data-text="Brüh">
+        Brüh
+      </span>
+    </div>
+  </div>
+  <script>
+    window.onload = () => {
+      const CLASSES = [
+        "outline",
+        "up",
+        "italic-outline",
+        "slate",
+        "mauve",
+        "graydient",
+        "red-blue",
+        "brown-stack",
+        "radial",
+        "purple",
+        "green-marble",
+        "rainbow",
+        "aqua",
+        "texture-stack",
+        "paper-bag",
+        "sunset",
+        "tilt",
+        "blues",
+        "yellow-dash",
+        "green-stack",
+        "chrome",
+        "marble-slab",
+        "gray-block",
+        "superhero",
+        "horizon",
+        "stack-3d",
+      ];
+
+      let t = document.getElementById("wrapper");
+      t.className += " " + CLASSES[Math.floor(Math.random() * CLASSES.length)];
+    };
+  </script>
+</html>
