@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- weil theresa ein brüh ist -->
+    <!-- theresa du brüh guck nicht in den source code -->
     <!-- https://github.com/arizzitano/css3wordart -->
     <title>brüh</title>
     <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   </head>
   <div id="content">
     <div id="wrapper" class="wordart">
@@ -44,12 +45,15 @@
         "stack-3d",
       ];
 
-      let t = document.getElementById("wrapper");
-      t.className =
-        "wordart " + CLASSES[Math.floor(Math.random() * CLASSES.length)];
-    };
+      let last = CLASSES[Math.floor(Math.random() * CLASSES.length)];
+      $("#wrapper").addClass(last);
 
+      setInterval(() => {
+        $("#wrapper").removeClass(last);
+        last = CLASSES[Math.floor(Math.random() * CLASSES.length)];
+        $("#wrapper").addClass(last);
+      }, 2000);
+    };
     window.onload = update;
-    window.onclick = update;
   </script>
 </html>
