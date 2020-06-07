@@ -70,6 +70,10 @@ __      _____  ___ ___   _   ___ _____
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .wordart .text {
   display: flex;
